@@ -1,13 +1,24 @@
+let myLibrary = []
+
+function addBookToLibrary(aBook) {
+    myLibrary.push(aBook);
+}
+
+function displayBooks() {
+
+}
+
 function Book(title, author, numPages, isRead) {
     this.title = title;
     this.author = author;
     this.numPages = numPages;
     this.isRead = isRead;
+}
 
-    this.info = function() {
-        bookInfo = title + " by " + author + ", " + numPages + " pages, ";
+Book.prototype.info = function() {
+    bookInfo = this.title + " by " + this.author + ", " + this.numPages + " pages, ";
 
-        if(isRead) {
+        if(this.isRead) {
             bookInfo += "read";
         }
         else {
@@ -15,7 +26,6 @@ function Book(title, author, numPages, isRead) {
         }
 
         return bookInfo;
-    }
 }
 
 let currRead = new Book('Tender is the Flesh', 'Augustina Bazterrica', 209, false);
