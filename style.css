@@ -4,5 +4,21 @@
 }
 
 body {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 1fr 400px;
+}
+
+.bookshelf, .controls {
+    min-height: 100vh;
+}
+
+.bookshelf {
+    background-image: url(images/bookshelf.jpg);
+    background-position-y: -20px;
+    background-size: contain;
+}
+
+.controls {
     background-color: papayawhip;
 }
